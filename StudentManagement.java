@@ -56,7 +56,7 @@ public class StudentManagement {
             ps.setInt(2, age);
             ps.setString(3, branch);
             ps.executeUpdate();
-            System.out.println("✅ Student added.");
+            System.out.println(" Student added.");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -97,8 +97,8 @@ public class StudentManagement {
             ps.setInt(4, id);
 
             int rows = ps.executeUpdate();
-            if (rows > 0) System.out.println("✅ Student record updated.");
-            else System.out.println("❌ Student ID not found.");
+            if (rows > 0) System.out.println(" Student record updated.");
+            else System.out.println(" Student ID not found.");
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -113,8 +113,8 @@ public class StudentManagement {
             PreparedStatement ps = con.prepareStatement(sql);
             ps.setInt(1, id);
             int rows = ps.executeUpdate();
-            if (rows > 0) System.out.println("✅ Student deleted.");
-            else System.out.println("❌ Student ID not found.");
+            if (rows > 0) System.out.println(" Student deleted.");
+            else System.out.println(" Student ID not found.");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -133,7 +133,7 @@ public class StudentManagement {
                     rs.getInt("id"), rs.getString("name"),
                     rs.getInt("age"), rs.getString("branch"));
             } else {
-                System.out.println("❌ Student not found.");
+                System.out.println(" Student not found.");
             }
         } catch (Exception e) {
             e.printStackTrace();
